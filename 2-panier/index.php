@@ -1,12 +1,23 @@
 <?php
 
-require('ProductList.php');
+    include('classes/Product.php');
+    include('classes/ProductList.php');
 
-// new ProductList = ProductList();
+    include('classes/ProductOrder.php');
+
+    $ProductList = new ProductList();
 
 ?>
 
-<h1>Panier</h1>
+<html>
+    <head></head>
+    <body>
+        <h1>Liste des produits</h1>
+        
+        <?php $ProductList->displayProducts(); ?>
 
-<form action=""></form>
+        
+    </body>
+</html>
+
 
