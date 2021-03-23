@@ -9,10 +9,15 @@
 	$name = $_POST['productName'];
 	$quantity = $_POST['quantity'];
 
-	$productList = new ProductList();
-	$product = $productList->getProductByName($name);
+	if( intval($quantity) > 0)
+	{
+		$productList = new ProductList();
+		$product = $productList->getProductByName($name);
 
-	$cart = new Cart();
-	$cart->addToCart( $product , $quantity);
+		$cart = new Cart();
+		$cart->addToCart( $product , $quantity);
+	}
 
-	header('Location: index.php');
+	
+
+	//header('Location: index.php');

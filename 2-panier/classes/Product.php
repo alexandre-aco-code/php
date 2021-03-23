@@ -1,4 +1,3 @@
-
 <?php
 
 class Product
@@ -20,6 +19,11 @@ class Product
     public function setName(String $name): void
     {
         $this->name = $name;
+    }
+
+    public function getPrice(): int
+    {
+        return $this->price;
     }
 
     public function display(): void

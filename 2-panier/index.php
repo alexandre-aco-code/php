@@ -1,22 +1,25 @@
 <?php
 
-    include 'classes/Product.php';
-    include 'classes/ProductList.php';
+include 'classes/Product.php';
+include 'classes/ProductList.php';
 
-    // encapsulation 
+// encapsulation 
 
-    $productList = new ProductList();
+
+$productList = new ProductList();
 
 ?>
 
 <html>
 
-    <head></head>
+<head></head>
 
-    <body>
-        <h1> Liste des produits </h1>
+<body>
+    <h1> Liste des produits </h1>
 
-        <?php $productList->displayProducts(); ?>
-    </body>
+    <p> <a href="cart.php"> Voir le panier </a> </p>
+
+    <?php $productList->displayProducts(); ?>
+</body>
 
 </html>
