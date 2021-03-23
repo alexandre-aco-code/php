@@ -1,23 +1,22 @@
 <?php
 
-    include('classes/Product.php');
-    include('classes/ProductList.php');
+    include 'classes/Product.php';
+    include 'classes/ProductList.php';
 
-    include('classes/ProductOrder.php');
+    // encapsulation 
 
-    $ProductList = new ProductList();
+    $productList = new ProductList();
 
 ?>
 
 <html>
+
     <head></head>
+
     <body>
-        <h1>Liste des produits</h1>
-        
-        <?php $ProductList->displayProducts(); ?>
+        <h1> Liste des produits </h1>
 
-        
+        <?php $productList->displayProducts(); ?>
     </body>
+
 </html>
-
-

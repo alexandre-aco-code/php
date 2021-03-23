@@ -1,20 +1,23 @@
 <?php
 
-class Cart {
+class Cart
+{
+    private $orders;
+    private $shippingFee;
+    private $storage;
 
-    private $order;
-    private float $shippingFee;
-
-    public function addToCart(product $product, int $quantity) {
-
-
+    public function __construct()
+    {
+        $this->orders = [];
+        $this->shippingFee = 5;
+        $this->storage = new Session();
     }
 
-    public function displayCart() {
+    public function addToCart(Product $product, int $quantity): void
+    {
+        $order = new ProductOrder($product, $quantity);
+        $this->orders[] = $order;
 
-    }
-
-    public function gettotalPriceWithoutTaxes(){
-        
+        var_dump($this->orders);
     }
 }

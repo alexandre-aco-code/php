@@ -1,18 +1,17 @@
 <?php
 
-class ProductOrder {
-
-    private $productName;
+class ProductOrder
+{
+    private $product;
     private $quantity;
 
-    public function __construct($productName, $quantity) {
-
-        $this->productName = $productName;
+    public function __construct(Product $product, int $quantity)
+    {
+        $this->product = $product;
         $this->quantity = $quantity;
+    }
 
-    } 
-
-    public function display() {
-        echo " {$this->productName} - {$this->quantity} ";
+    public function display(): void
+    {
     }
 }
