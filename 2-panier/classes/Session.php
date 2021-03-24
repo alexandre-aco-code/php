@@ -26,3 +26,4 @@
 			session_destroy();
 		}
 	}
+?>

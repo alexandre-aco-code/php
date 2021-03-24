@@ -1,31 +1,22 @@
-<?php
+<?php 
 
-include 'classes/Product.php';
-include 'classes/ProductList.php';
+	include 'classes/Product.php';
+	include 'classes/ProductList.php';
 
-// encapsulation 
+	// encapsulation 
 
 
-$productList = new ProductList();
-$requestPDO = new RequestPDO();
+	$productList = new ProductList();
 
 ?>
 
 <html>
+	<head></head>
+	<body>
+		<h1> Liste des produits </h1>
 
-<head></head>
+		<p> <a href="cart.php"> Voir le panier </a> </p>
 
-<body>
-    <h1> Liste des produits </h1>
-
-    <p> <a href="cart.php"> Voir le panier </a> </p>
-
-    <?php $productList->displayProducts(); ?>
-
-    <!-- <?php $requestPDO->selectAll(); ?> -->
-
-    <!-- <?php var_dump($Database->getProduct('coca')); ?> -->
-
-</body>
-
+		<?php $productList->displayProducts(); ?>
+	</body>
 </html>

@@ -1,31 +1,29 @@
-<?php
-include 'interfaces/IStorage.php';
+<?php 
+	include 'interfaces/IStorage.php';
+	
+	include 'classes/Product.php';
+	include 'classes/ProductList.php';
+	include 'classes/ProductOrder.php';
+	include 'classes/Cart.php';
+	include 'classes/Session.php';
+	include 'classes/Database.php';
+	
+	// encapsulation 
 
-include 'classes/Product.php';
-include 'classes/ProductList.php';
-include 'classes/ProductOrder.php';
-include 'classes/Cart.php';
-include 'classes/Session.php';
-include 'classes/Database.php';
-// encapsulation 
 
-
-$cart = new Cart();
+	$cart = new Cart();
 
 ?>
 
 <html>
+	<head></head>
+	<body>
+		<h1> Liste des produits </h1>
 
-<head></head>
+		<p> <a href="cart.php"> Voir le panier </a> </p>
 
-<body>
-    <h1> Liste des produits </h1>
+		<?php $cart->displayCart(); ?>
 
-    <p> <a href="cart.php"> Voir le panier </a> </p>
-
-    <?php $cart->displayCart(); ?>
-
-    <a href="confirm.php"> Voir les frais des ports </a>
-</body>
-
+		<a href="confirm.php"> Voir les frais des ports </a>
+	</body>
 </html>

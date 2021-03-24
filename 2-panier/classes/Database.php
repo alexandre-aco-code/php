@@ -62,6 +62,5 @@
 		{
 			$this->pdo->query("DELETE FROM cart");
 		}
-
-
 	}
+?>

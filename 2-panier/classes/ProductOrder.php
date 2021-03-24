@@ -1,40 +1,44 @@
-<?php
+<?php 
 
-class ProductOrder
-{
-    // encapsulation
-    
-    // bonne pratique, mettre en private au départ ensuite passer en public
+	class ProductOrder
+	{
+		// encapsulation
 
-    public $product;
-    private $quantity;
+		// bonne pratique : mettre par defaut les methodes et proprietés en private
+		// votre classe doit etre comprehensible et facile a utiliser
 
-    public function __construct(Product $product, int $quantity)
-    {
-        $this->product = $product;
-        $this->quantity = $quantity;
-    }
+		public $product;
+		private $quantity;
 
-    //YAGNI You aren't gonna need IT
+		public function __construct( Product $product , int $quantity )
+		{
+			$this->product = $product;
+			$this->quantity = $quantity;
+		}
 
-    // public function setQuantity {}
+		// YAGNI
 
-    public function addQuantity(int $quantity): void
-    {
-        $this->quantity += $quantity;
-    }
+		// you aren't gonna need it
 
-    public function getQuantity(): int
-    {
-        return $this->quantity;
-    }
+		// anti pattern : Lava code
 
-    public function getTotal(): float
-    {
-        return $this->quantity * $this->product->getPrice();
-    }
+		public function addQuantity( int $quantity ) : void
+		{
+			$this->quantity += $quantity;
+		}
 
-    public function display(): void
-    {
-    }
-}
+		public function getQuantity() : int
+		{
+			return $this->quantity;
+		}
+
+		public function getTotal() : float 
+		{
+			return $this->quantity * $this->product->getPrice();
+		}
+
+		public function display() : void 
+		{
+
+		}
+	}
