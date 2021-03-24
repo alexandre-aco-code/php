@@ -11,6 +11,12 @@ class ProductOrder
         $this->quantity = $quantity;
     }
 
+    //YAGNI You aren't gonna need IT
+
+    // public function setQuantity {
+
+    // }
+
     public function addQuantity(int $quantity): void
     {
         $this->quantity += $quantity;
