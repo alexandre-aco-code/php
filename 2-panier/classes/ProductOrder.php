@@ -2,6 +2,10 @@
 
 class ProductOrder
 {
+    // encapsulation
+    
+    // bonne pratique, mettre en private au départ ensuite passer en public
+
     public $product;
     private $quantity;
 
@@ -13,9 +17,7 @@ class ProductOrder
 
     //YAGNI You aren't gonna need IT
 
-    // public function setQuantity {
-
-    // }
+    // public function setQuantity {}
 
     public function addQuantity(int $quantity): void
     {
