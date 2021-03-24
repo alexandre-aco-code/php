@@ -7,6 +7,7 @@ include 'classes/ProductList.php';
 
 
 $productList = new ProductList();
+$requestPDO = new RequestPDO();
 
 ?>
 
@@ -20,6 +21,11 @@ $productList = new ProductList();
     <p> <a href="cart.php"> Voir le panier </a> </p>
 
     <?php $productList->displayProducts(); ?>
+
+    <!-- <?php $requestPDO->selectAll(); ?> -->
+
+    <!-- <?php var_dump($Database->getProduct('coca')); ?> -->
+
 </body>
 
 </html>

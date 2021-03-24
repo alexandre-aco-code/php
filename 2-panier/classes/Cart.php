@@ -10,11 +10,18 @@ class Cart
     {
         $this->orders = [];
         $this->shippingFee = 5;
-        $this->storage = new Session();
 
-        if (!empty($this->storage->loadCart())) {
-            $this->orders = $this->storage->loadCart();
-        }
+        $this->storage = new Database();
+        $this->orders = $this->storage->loadCart();
+
+        /*
+		$this->storage = new Session();
+
+		if( !empty($this->storage->loadCart()) )
+		{
+			$this->orders = $this->storage->loadCart();
+		}*/
+
     }
 
     public function addToCart(Product $product, int $quantity): void
@@ -34,7 +41,7 @@ class Cart
 
         $this->storage->saveCart($this->orders);
 
-        var_dump($this->orders);
+        // var_dump($this->orders);
     }
 
     public function displayCart()

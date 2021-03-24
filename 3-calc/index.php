@@ -66,7 +66,6 @@ $c = new CalculatriceOverride(5,10);
 echo $c->operator('+');
 
 */
-<?php 
 
 class Calculatrice
 {

@@ -8,10 +8,18 @@ class ProductList
     {
         $this->products = [];
         //$this->products[] = new Product('Coca' , 2);
-        array_push($this->products, new Product('Coca', 2));
-        array_push($this->products, new Product('Frites', 3));
-        array_push($this->products, new Product('Kebab', 6));
-        array_push($this->products, new Product('Chips', 0.50));
+        // array_push($this->products, new Product('Coca', 2));
+        // array_push($this->products, new Product('Frites', 3));
+        // array_push($this->products, new Product('Kebab', 6));
+        // array_push($this->products, new Product('Chips', 0.50));
+
+        $pdo = new RequestPDO();
+        $allproducts = $pdo->selectAll();
+
+        foreach ($allproducts as $product) {
+            array_push($this->products, new Product($product['Name'], $product['Price']));
+        }
+
     }
 
     public function displayProducts(): void

@@ -1,10 +1,12 @@
 <?php
+include 'interfaces/IStorage.php';
 
 include 'classes/Product.php';
 include 'classes/ProductList.php';
 include 'classes/ProductOrder.php';
 include 'classes/Cart.php';
 include 'classes/Session.php';
+include 'classes/Database.php';
 // encapsulation 
 
 

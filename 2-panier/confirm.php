@@ -1,5 +1,6 @@
 <?php
 
+include 'interfaces/iStorage.php';
 include 'classes/Product.php';
 include 'classes/ProductList.php';
 include 'classes/ProductOrder.php';
