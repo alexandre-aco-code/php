@@ -42,7 +42,7 @@ class Cart
 
 		$this->storage->saveCart( $this->orders );
 
-		var_dump($this->orders);
+		// var_dump($this->orders);
 
 	}
 
