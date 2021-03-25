@@ -17,7 +17,7 @@ class ProductList
 		// $allproducts = $pdo->selectAll();
 
 		// foreach ($allproducts as $product) {
-		// 	array_push($this->products, new Product($product['Name'], $product['Price']));test
+		// 	array_push($this->products, new Product($product['Name'], $product['Price']));testtesttest
 		// }
 	}
 
