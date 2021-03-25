@@ -4,11 +4,16 @@
 	{
         private $pdo;
 
+        public function __construct()
+        {
+            $this->connect();
+        }
+
         public function connect():void
         {
             $this->pdo = new PDO('mysql:host=localhost;dbname=solid', 'root', '');
         }
-        
+
 		public function loadProducts() : array
 		{
 			$result = [];
