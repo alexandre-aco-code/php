@@ -8,6 +8,7 @@
 		public function __construct()
 		{
 			$this->pdo = new PDO('mysql:host=localhost;dbname=solid' , 'root' , '' );
+			$this->productList = new ProductList();
 		}
 
 
@@ -62,19 +63,5 @@
 			$this->pdo->query("DELETE FROM cart");
 		}
 
-		public function selectAll()
-		{
-			$sql = "SELECT * FROM product";
-			$query = $this->pdo->prepare($sql);
-			$query->execute();
 
-			$products = $query->fetchAll(PDO::FETCH_ASSOC);
-
-			// echo "<pre>";
-			// var_dump($products);
-			// echo "</pre>";
-
-			return $products;
-		}
 	}
-?>

@@ -8,6 +8,10 @@
 	include 'classes/Session.php';
 	include 'classes/Database.php';
 	
+		include 'interfaces/IProductLoader.php';
+		include 'classes/DatabaseProductList.php';
+		include 'classes/MemoryProductList.php';
+	
 	// encapsulation 
 
 
