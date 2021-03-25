@@ -19,7 +19,7 @@
 	// encapsulation 
 
 
-	$cart = new Cart(new ShippingNoel());
+	$cart = new Cart(new Shipping());
 
 ?>
 

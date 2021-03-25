@@ -20,7 +20,7 @@
 	// encapsulation 
 
 
-	$cart = new Cart(new ShippingConfinement());
+	$cart = new Cart(new Shipping());
 
 ?>
 
