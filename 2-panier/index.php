@@ -1,7 +1,11 @@
 <?php 
 
+	// include 'interfaces/IStorage.php';
+
 	include 'classes/Product.php';
 	include 'classes/ProductList.php';
+
+	// include 'classes/Database.php';
 
 	// encapsulation 
 

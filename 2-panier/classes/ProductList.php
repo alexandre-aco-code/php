@@ -12,6 +12,13 @@ class ProductList
 		array_push( $this->products , new Product('Frites' , 3));
 		array_push( $this->products , new Product('Kebab' , 6));
 		array_push( $this->products , new Product('Chips' , 0.50));
+
+		// $pdo = new Database();
+		// $allproducts = $pdo->selectAll();
+
+		// foreach ($allproducts as $product) {
+		// 	array_push($this->products, new Product($product['Name'], $product['Price']));
+		// }
 	}
 
 	public function displayProducts() : void

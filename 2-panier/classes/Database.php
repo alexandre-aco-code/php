@@ -62,5 +62,20 @@
 		{
 			$this->pdo->query("DELETE FROM cart");
 		}
+
+		public function selectAll()
+		{
+			$sql = "SELECT * FROM product";
+			$query = $this->pdo->prepare($sql);
+			$query->execute();
+
+			$products = $query->fetchAll(PDO::FETCH_ASSOC);
+
+			// echo "<pre>";
+			// var_dump($products);
+			// echo "</pre>";
+
+			return $products;
+		}
 	}
 ?>
