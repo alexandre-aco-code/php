@@ -8,7 +8,6 @@
 		public function __construct()
 		{
 			$this->pdo = new PDO('mysql:host=localhost;dbname=solid' , 'root' , '' );
-			$this->productList = new ProductList();
 		}
 
 
