@@ -5,17 +5,9 @@ class ProductList
 	private $products;
 	private $productLoader;
 
-	public function __construct()
+	public function __construct(IProductLoader $productLoader)
 	{
-		//$this->products[] = new Product('Coca' , 2);
-		/*
-		array_push( $this->products , new Product('Coca' , 2));
-		array_push( $this->products , new Product('Frites' , 3));
-		array_push( $this->products , new Product('Kebab' , 6));
-		array_push( $this->products , new Product('Chips' , 0.50));
-		*/
-
-		$this->productLoader = new DatabaseProductList();
+		$this->productLoader = $productLoader;
 		$this->products = $this->productLoader->loadProducts();
 	}
 
@@ -30,11 +22,6 @@ class ProductList
 
 	public function getProductByName(String $name): Product
 	{
-		echo "<pre>";
-		var_dump($name);
-		print_r($this->products);
-		echo "</pre>";
-	
 		foreach ($this->products as $product) {
 			if ($product->getName() == $name) {
 				return $product;

@@ -11,10 +11,19 @@
 	include 'classes/DatabaseProductList.php';
 	include 'classes/MemoryProductList.php';
 
+
+	include 'interfaces/IShipping.php';
+	include 'classes/Shipping.php';
+	include 'classes/ShippingConfinement.php';
+	include 'classes/ShippingNoel.php';
+
 	// encapsulation 
 
 
-	$productList = new ProductList();
+	// $productList = new ProductList();
+
+
+	$productList = new ProductList(new DatabaseProductList());
 
 ?>
 

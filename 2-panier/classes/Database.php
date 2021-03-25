@@ -8,8 +8,9 @@
 		public function __construct()
 		{
 			$this->pdo = new PDO('mysql:host=localhost;dbname=solid' , 'root' , '' );
-			$this->productList = new ProductList();
+			$this->productList = new ProductList(new DatabaseProductList());
 		}
+		
 
 
 		public function saveCart( array $products ) : void 
@@ -39,7 +40,7 @@
 
 			$products = $query->fetchAll(PDO::FETCH_ASSOC);
 
-			var_dump($products); // [ [ 'nom' => ' coca'], [ ....]]
+			// var_dump($products); // [ [ 'nom' => ' coca'], [ ....]]
 			// [ 'coca' =>  productOrder , 'frites' => productOrder  ]
 
 			$result = [];

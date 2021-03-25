@@ -6,14 +6,21 @@
 	include 'classes/Cart.php';
 	include 'classes/Session.php';
 	include 'classes/Database.php';
-		include 'interfaces/IProductLoader.php';
-		include 'classes/DatabaseProductList.php';
-		include 'classes/MemoryProductList.php';
+
+	include 'interfaces/IProductLoader.php';
+	include 'classes/DatabaseProductList.php';
+	include 'classes/MemoryProductList.php';
+
+
+	include 'interfaces/IShipping.php';
+	include 'classes/Shipping.php';
+	include 'classes/ShippingConfinement.php';
+	include 'classes/ShippingNoel.php';
 	
 	// encapsulation 
 
 
-	$cart = new Cart();
+	$cart = new Cart(new ShippingNoel());
 
 ?>
 

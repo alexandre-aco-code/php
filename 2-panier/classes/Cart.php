@@ -5,14 +5,17 @@ class Cart
 	private $orders;
 	private $shippingFee;
 	private $storage;
+	private $shipping;
 
-	public function __construct()
+	public function __construct(IShipping $shipping)
 	{
 		$this->orders = [];
-		$this->shippingFee = 5;
 		
 		$this->storage = new Database();
 		$this->orders = $this->storage->loadCart();
+
+		$this->shipping = $shipping;
+		// $this->shippingFee = $this->calculateFees();
 		/*
 		$this->storage = new Session();
 
@@ -88,7 +91,7 @@ class Cart
 
 	public function getPriceWithTaxesAndShippingFees() : float
 	{
-		return $this->getPriceWithTaxes() + $this->shippingFee;
+		return $this->getPriceWithTaxes() + $this->calculateFees();
 	}
 
 	public function displayFees() 
@@ -96,6 +99,11 @@ class Cart
 		echo '<p>Total HT ' . $this->getPriceWithoutFees() . ' €</p>';
 		echo '<p>Total TTC ' . $this->getPriceWithTaxes() . ' €</p>';
 		echo '<p>Total TTC + frais de port ' . $this->getPriceWithTaxesAndShippingFees() . ' €</p>';
+	}
+
+	public function calculateFees()
+	{
+		return $this->shipping->calculateFees($this->getPriceWithoutFees());
 	}
 
 
