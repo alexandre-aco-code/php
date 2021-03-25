@@ -1,14 +1,19 @@
 <?php
 
-	class Database implements IStorage
+	class Database implements IStorage, IConnect
 	{
 		private $pdo;
 		private $productList;
 
 		public function __construct()
 		{
-			$this->pdo = new PDO('mysql:host=localhost;dbname=solid' , 'root' , '' );
+			$this->connect();
 			$this->productList = new ProductList(new DatabaseProductList());
+		}
+		
+		public function connect() : void
+		{
+			$this->pdo = new PDO('mysql:host=localhost;dbname=solid', 'root', '');
 		}
 		
 

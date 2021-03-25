@@ -1,7 +1,14 @@
 <?php
 
-	class DatabaseProductList implements IProductLoader
+	class DatabaseProductList implements IProductLoader, IConnect
 	{
+        private $pdo;
+
+        public function connect():void
+        {
+            $this->pdo = new PDO('mysql:host=localhost;dbname=solid', 'root', '');
+        }
+        
 		public function loadProducts() : array
 		{
 			$result = [];

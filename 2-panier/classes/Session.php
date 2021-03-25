@@ -1,8 +1,13 @@
 <?php
 
-	class Session implements IStorage
+	class Session implements IStorage, IConnect
 	{
 		public function __construct()
+		{
+			$this->connect();
+		}
+
+		public function connect() : void
 		{
 			session_start();
 		}

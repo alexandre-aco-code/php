@@ -1,4 +1,5 @@
-<?php 
+<?php
+		include 'interfaces/IConnect.php';
 	include 'interfaces/IStorage.php';
 	
 	include 'classes/Product.php';
@@ -16,6 +17,8 @@
 	include 'classes/Shipping.php';
 	include 'classes/ShippingConfinement.php';
 	include 'classes/ShippingNoel.php';
+
+
 	
 	// encapsulation 
 

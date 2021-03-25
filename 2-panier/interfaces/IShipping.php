@@ -2,5 +2,5 @@
 
 interface IShipping
 {
-    public function calculateFees(int $ht) : float;
+    function calculateFees(int $ht) : float;
 }
