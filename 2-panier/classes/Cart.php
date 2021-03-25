@@ -3,7 +3,6 @@
 class Cart
 {
 	private $orders;
-	private $shippingFee;
 	private $storage;
 	private $shipping;
 
@@ -15,7 +14,7 @@ class Cart
 		$this->orders = $this->storage->loadCart();
 
 		$this->shipping = $shipping;
-		// $this->shippingFee = $this->calculateFees();
+		
 		/*
 		$this->storage = new Session();
 

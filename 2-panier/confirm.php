@@ -11,7 +11,6 @@
 	include 'classes/DatabaseProductList.php';
 	include 'classes/MemoryProductList.php';
 
-
 	include 'interfaces/IShipping.php';
 	include 'classes/Shipping.php';
 	include 'classes/ShippingConfinement.php';
