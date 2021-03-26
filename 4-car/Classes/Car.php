@@ -1,8 +1,8 @@
 <?php
 
-class Car
+class Car implements ICar
 {
-    private $price;
+    protected $price;
     private $name;
     private $options;
 
@@ -10,24 +10,19 @@ class Car
     {
         $this->name = $name;
         $this->price = $price;
-        $this->options = [];
     }
 
-    public function addOption( Option $option ) 
+
+
+    public function getBasePrice(): float
     {
-        $this->options[] = $option;
+        return $this->price;
     }
 
-    public function getTotalPrice() : float 
+    public function getTotalPrice(): float
     {
         $result = $this->price;
 
-        foreach ($this->options as $option )
-        {
-            $result += $option->getPrice();
-        }
         return $result;
     }
-
-
 }
