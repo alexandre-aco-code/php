@@ -36,9 +36,9 @@ $Chocolat = new Drink('Chocolat',2.10, 'small');
 echo "<br>" . $Chocolat->getTotalPrice();
 echo "<br>" . $Chocolat->getDescription();
 
-$ChocolatWithCreamWithMilkWithChantillyWithChocolat = new Chocolate ( new Chantilly ( new Milk ( new Cream ( $Chocolat ))));
-echo "<br>" . $ChocolatWithCreamWithMilkWithChantillyWithChocolat->getTotalPrice();
-echo "<br>" . $ChocolatWithCreamWithMilkWithChantillyWithChocolat->getDescription();
+$ChocolatWithCreamWithMilkWithChantillyWithChocolate = new Chocolate ( new Chantilly ( new Milk ( new Cream ( $Chocolat ))));
+echo "<br>" . $ChocolatWithCreamWithMilkWithChantillyWithChocolate->getTotalPrice();
+echo "<br>" . $ChocolatWithCreamWithMilkWithChantillyWithChocolate->getDescription();
 
 
 

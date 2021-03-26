@@ -8,6 +8,6 @@ class Milk extends BaseDrinkOption
     }
     public function getDescription(): string
     {
-        return $this->drink->getDescription() . " avec lait";
+        return $this->drink->getDescription() . " avec Lait";
     }
 }
