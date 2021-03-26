@@ -2,22 +2,35 @@
 
 class Drink implements IDrink {
 
-    protected $name;
-    protected $price;
-    protected $size;
-    protected $topping;
+    public $name;
+    public $price;
+    public $size;
 
-    public function __construct($name,$price) {
+    public function __construct($name,$price,$size) {
         $this->name = $name;
         $this->price = $price;
+        $this->size = $size;
 
     }
 
     public function getBasePrice() : float {
-        return $this->price;
+        if ($this->size == 'small') return $this->price;
+        if ($this->size == 'medium') return $this->price*1.3;
+        if ($this->size == 'large') return $this->price*1.6;
     }
 
     public function getTotalPrice() : float {
-        return $this->price;
+
+        if ($this->size == 'small') return $this->price;
+        if ($this->size == 'medium') return $this->price * 1.3;
+        if ($this->size == 'large') return $this->price * 1.6;
+    }
+
+    public function getSize() : string {
+        return $this->size;
+    }
+
+    public function getDescription() : string {
+        return $this->size . " " . $this->name;
     }
 }
