@@ -6,7 +6,7 @@ abstract class BaseDrinkOption implements IDrink {
 
     public function __construct(IDrink $drink)
     {
-        $this->$drink = $drink;
+        $this->drink = $drink;
     }
 
     public function getBasePrice(): float
