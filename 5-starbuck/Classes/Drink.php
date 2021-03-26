@@ -2,9 +2,9 @@
 
 class Drink implements IDrink {
 
-    public $name;
-    public $price;
-    public $size;
+    private $name;
+    private $price;
+    private $size;
 
     public function __construct($name,$price,$size) {
         $this->name = $name;
