@@ -9,11 +9,6 @@ abstract class BaseDrinkOption implements IDrink {
         $this->drink = $drink;
     }
 
-    public function getBasePrice(): float
-    {
-        return $this->drink->getBasePrice();
-    }
-
     abstract public function getTotalPrice() : float;
 
     abstract public function getDescription() : string;

@@ -10,6 +10,6 @@ class Chantilly extends BaseDrinkOption
     }
     public function getDescription(): string
     {
-        return $this->drink->getDescription() . " avec Chantilly";
+        return $this->drink->getDescription() . " à la  Chantilly";
     }
 }

@@ -2,7 +2,7 @@
 
 include 'includes/autoload.php';
 
-$EspressoMedium = new Drink('Espresso',1.20, 'medium');
+$EspressoMedium = new Drink('Espresso',1.20, Drink::SIZE_MEDIUM);
 
 echo "<br>" . $EspressoMedium->getTotalPrice();
 echo "<br>" . $EspressoMedium->getDescription();
@@ -23,16 +23,7 @@ echo "<br>" . $EspressoMediumWithCreamWithChocolate->getTotalPrice();
 echo "<br>" . $EspressoMediumWithCreamWithChocolate->getDescription();
 
 
-$TheLarge = new Drink('Thé',1.70, 'large');
-echo "<br>" . $TheLarge->getTotalPrice();
-echo "<br>" . $TheLarge->getDescription();
-
-$TheLargeWithCream = new Cream($TheLarge);
-echo "<br>" . $TheLargeWithCream->getTotalPrice();
-echo "<br>" . $TheLargeWithCream->getDescription();
-
-
-$Chocolat = new Drink('Chocolat',2.10, 'small');
+$Chocolat = new Drink('Chocolat',2.10, Drink::SIZE_SMALL);
 echo "<br>" . $Chocolat->getTotalPrice();
 echo "<br>" . $Chocolat->getDescription();
 
